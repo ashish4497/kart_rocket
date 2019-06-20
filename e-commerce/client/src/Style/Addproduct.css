@@ -1,0 +1,72 @@
+.main {
+  background-color: #1a8084;
+}
+
+.main .product_details {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px 0;
+}
+
+.main .product_details .product_form {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 45px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.main .product_details h1 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-bottom: 25px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #9eb2c9;
+}
+
+.main .product_details input[type="text"],
+.main .product_details input[type="file"],
+.main .product_details select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main .product_details input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main .product_details input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.main .product_details label {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-family: "Caveat", cursive;
+  color: #1a8084;
+}
+
+.main .product_details ::-webkit-input-placeholder {
+  font-size: 14px;
+  font-family: "Caveat", cursive;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=Addproduct.css.map */

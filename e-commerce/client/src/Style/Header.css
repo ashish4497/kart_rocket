@@ -1,0 +1,101 @@
+.logo {
+  text-align: center;
+}
+
+ul li {
+  display: inline;
+}
+
+.first-page {
+  background-image: url("https://cdn.shopify.com/s/files/1/0070/7032/files/about_us_page_hero.jpg?v=1524143851&width=1024");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.top-nav-bar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 40% 30%;
+      grid-template-columns: 30% 40% 30%;
+  padding: 20px 0;
+  font-size: 1.3rem;
+  -webkit-text-decoration: capitalization;
+          text-decoration: capitalization;
+}
+
+.top-nav-bar .col1-row1-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-nav-bar .col1-row1-left ul li {
+  margin: 0 2rem;
+  color: white;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  line-height: 10%;
+  font-size: 1rem;
+}
+
+.top-nav-bar .col1-row1-left ul {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.top-nav-bar .col1-row3-right ul li {
+  color: white;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: none;
+  padding-bottom: 6px;
+  font-size: 1rem;
+}
+
+.top-nav-bar .col1-row3-right ul {
+  text-align: right;
+  margin-right: 1.5rem;
+}
+
+.top-nav-bar .top-right ul li {
+  color: white;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: none;
+  padding-bottom: 6px;
+  font-size: 1rem;
+}
+
+.top-nav-bar .top-right ul {
+  text-align: right;
+  margin-right: 1.5rem;
+}
+
+.row-e-content {
+  position: relative;
+  height: 90vh;
+}
+
+.row-e-content p {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-family: "Caveat", cursive;
+  text-align: center;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  line-height: 1.2;
+  font-weight: 300;
+}
+/*# sourceMappingURL=Header.css.map */

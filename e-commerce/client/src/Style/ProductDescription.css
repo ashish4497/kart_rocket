@@ -1,0 +1,108 @@
+.product_description .product_image {
+  padding: 30px 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+}
+
+.product_description .size-btn,
+.product_description .clr-btn {
+  text-transform: uppercase;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  outline: 0;
+  border: 0;
+  border-radius: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.product_description .size-btn :hover,
+.product_description .clr-btn :hover {
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product_description .selected {
+  background: #9eb2c9;
+}
+
+.product_description h2 {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #9eb2c9;
+}
+
+.product_description p {
+  padding: 10px 0;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: "Caveat", cursive;
+  color: #111111;
+}
+
+.product_description .left-side-image {
+  text-align: center;
+}
+
+.product_description .left-side-image .product-image {
+  text-align: center;
+}
+
+.product_description .left-side-image .product-image img {
+  height: 60%;
+  width: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.product_description .button {
+  margin-top: 20px;
+}
+
+.product_description .detail-btn {
+  position: relative;
+  padding: 10px 30px;
+  outline: 0;
+  border: 0;
+  font-weight: 250;
+  text-transform: capitalize;
+  font-size: 1rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+  cursor: pointer;
+}
+
+.product_description .detail-btn:hover {
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #eb4800;
+  color: #1a8084;
+  font-weight: 350;
+}
+
+.product_description .buynow_btn {
+  margin-left: 15px;
+}
+
+.product_description .product_description .info_product {
+  padding: 35px 50px;
+}
+/*# sourceMappingURL=ProductDescription.css.map */

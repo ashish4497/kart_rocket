@@ -1,0 +1,92 @@
+.cart_component .added_product .cart_card .cart-item {
+  display: block;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  padding: 30px 35px;
+}
+
+.cart_component .added_product .cart_card .cart-item .product-description {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.cart_component .added_product .cart_card .cart-item .cart_image {
+  height: 200px;
+  width: 200px;
+}
+
+.cart_component .button {
+  position: relative;
+}
+
+.cart_component .button .placeOrder_btn {
+  position: absolute;
+  bottom: 50%;
+}
+
+.cart_component .detail-btn {
+  position: relative;
+  padding: 15px 35px;
+  outline: 0;
+  border: 0;
+  font-weight: 250;
+  text-transform: capitalize;
+  font-size: 1rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+  cursor: pointer;
+  color: #9eb2c9;
+}
+
+.cart_component .detail-btn:hover {
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #eb4800;
+  color: #1a8084;
+  font-weight: 350;
+}
+
+.cart_component h1 {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #9eb2c9;
+}
+
+.cart_component p {
+  padding: 10px 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Caveat", cursive;
+  color: #111111;
+}
+
+.cart_component .product_quantity .quantity {
+  height: 20px;
+  width: 35px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.cart_component .product-description {
+  position: relative;
+}
+
+.cart_component .product-description .fas {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+/*# sourceMappingURL=productCart.css.map */

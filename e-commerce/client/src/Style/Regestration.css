@@ -1,0 +1,80 @@
+.signUp_section {
+  background-color: #1a8084;
+}
+
+.signUp_section .signUp_form {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px 45px;
+  width: 30%;
+  margin: 40px auto;
+}
+
+.signUp_section .signUp_form h1 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  font-weight: 250;
+  margin-bottom: 30px;
+  color: #1a8084;
+}
+
+.signUp_section .signUp_form input[type="text"],
+.signUp_section .signUp_form input[type="password"],
+.signUp_section .signUp_form input[type="tel"],
+.signUp_section .signUp_form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.signUp_section .signUp_form .signUp_btn {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+.signUp_section .signUp_form .signUp_btn:hover {
+  background-color: #45a049;
+}
+
+.signUp_section .signUp_form label {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-family: "Caveat", cursive;
+  color: #1a8084;
+}
+
+.signUp_section .signUp_form ::-webkit-input-placeholder {
+  font-size: 14px;
+  font-family: "Caveat", cursive;
+  text-transform: capitalize;
+}
+
+.signUp_section .signUp_form p {
+  text-align: right;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-family: "Caveat", cursive;
+  color: #1a8084;
+}
+
+.signUp_section .signUp_form p:hover {
+  color: #65b074;
+  font-weight: 700;
+}
+/*# sourceMappingURL=Regestration.css.map */

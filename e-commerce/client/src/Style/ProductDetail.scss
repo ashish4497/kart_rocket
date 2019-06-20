@@ -1,0 +1,66 @@
+// =========================
+//   admin product detail
+// ==========================
+.product_section {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 20px;
+	padding: 30px 25px;
+}
+h1 {
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: 400;
+	font-size: 1.4rem;
+	padding: 25px 0;
+	font-family: "Caveat", cursive;
+	color: #111111;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+p {
+	text-align: center;
+	// text-transform: capitalize;
+	font-weight: 400;
+	font-size: 1rem;
+	font-family: "Caveat", cursive;
+	color: #111111;
+	margin-top: 6px;
+}
+span {
+	color: #1a8084;
+	font-size: 1.3rem;
+	font-weight: 300;
+	display: flex;
+	justify-content: space-around;
+	padding: 0 15px;
+}
+.fas {
+	&:hover {
+		color: #eb4800;
+		cursor: pointer;
+	}
+}
+.product-name {
+	text-transform: uppercase;
+}
+.product-price {
+	color: #1a8084;
+	text-transform: capitalize;
+}
+.show_product {
+	// background-color:1a8084;
+	display: grid;
+	grid-template-rows: 250px 70px;
+	grid-gap: 0;
+	&:hover {
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+		cursor: pointer;
+	}
+	// &:hover .product_detail {
+	// 	background-color: #eb4800;
+	// }
+}

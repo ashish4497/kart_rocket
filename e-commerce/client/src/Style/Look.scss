@@ -1,0 +1,36 @@
+// ============================
+//       Look-Component
+// ============================
+.product_list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+	padding: 35px 50px;
+	p {
+		text-align: center;
+		text-transform: capitalize;
+		font-weight: 600;
+		font-size: 1rem;
+		font-family: "Caveat", cursive;
+		color: #1a8084;
+		margin-top: 18px;
+	}
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+	.product_images {
+		display: grid;
+		grid-template-rows: 300px 60px;
+		grid-gap: 0;
+		&:hover {
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+			cursor: pointer;
+		}
+		&:hover .product_detail {
+			background-color: #eb4800;
+		}
+	}
+}

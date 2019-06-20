@@ -1,0 +1,75 @@
+.product_section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  padding: 30px 25px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding: 25px 0;
+  font-family: "Caveat", cursive;
+  color: #111111;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Caveat", cursive;
+  color: #111111;
+  margin-top: 6px;
+}
+
+span {
+  color: #1a8084;
+  font-size: 1.3rem;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 15px;
+}
+
+.fas:hover {
+  color: #eb4800;
+  cursor: pointer;
+}
+
+.product-name {
+  text-transform: uppercase;
+}
+
+.product-price {
+  color: #1a8084;
+  text-transform: capitalize;
+}
+
+.show_product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 250px 70px;
+      grid-template-rows: 250px 70px;
+  grid-gap: 0;
+}
+
+.show_product:hover {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+/*# sourceMappingURL=ProductDetail.css.map */

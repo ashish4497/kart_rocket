@@ -1,0 +1,95 @@
+// ==================================
+//           Header section
+// ==================================
+.logo {
+	text-align: center;
+}
+ul li {
+	display: inline;
+}
+.first-page {
+	// background-color: yellowgreen;
+	// background-image: url("http://www.readyelements.com/wp-content/uploads/2017/free-stock-photo-spool-of-thread-with-a-needle-and-buttons-2452.jpg");
+	background-image: url("https://cdn.shopify.com/s/files/1/0070/7032/files/about_us_page_hero.jpg?v=1524143851&width=1024");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.top-nav-bar {
+	display: grid;
+	grid-template-columns: 30% 40% 30%;
+	padding: 20px 0;
+	.col1-row1-left {
+		display: flex;
+		ul li {
+			margin: 0 2rem;
+			color: white;
+			font-weight: 500;
+			font-family: "Roboto", sans-serif;
+			text-transform: uppercase;
+			line-height: 10%;
+			font-size: 1rem;
+		}
+		ul {
+			align-items: flex-start;
+		}
+	}
+	.col1-row2-center {
+		// margin: 0 10px;
+	}
+	.col1-row3-right {
+		ul li {
+			// margin: 0 1rem;
+			color: white;
+			font-weight: 500;
+			font-family: "Roboto", sans-serif;
+			text-transform: uppercase;
+			padding-left: 5px;
+			padding-right: 5px;
+			border-bottom: none;
+			padding-bottom: 6px;
+			font-size: 1rem;
+		}
+		ul {
+			text-align: right;
+			margin-right: 1.5rem;
+		}
+	}
+	font-size: 1.3rem;
+	text-decoration: capitalization;
+	.top-right {
+		ul li {
+			// margin: 0 1rem;
+			color: white;
+			font-weight: 500;
+			font-family: "Roboto", sans-serif;
+			text-transform: uppercase;
+			padding-left: 5px;
+			padding-right: 5px;
+			border-bottom: none;
+			padding-bottom: 6px;
+			font-size: 1rem;
+		}
+		ul {
+			text-align: right;
+			margin-right: 1.5rem;
+		}
+	}
+}
+.row-e-content {
+	position: relative;
+	height: 90vh;
+	p {
+		font-size: 1.5rem;
+		color: #ffffff;
+		font-family: "Caveat", cursive;
+		text-align: center;
+		width: 70%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		line-height: 1.2;
+		font-weight: 300;
+	}
+}

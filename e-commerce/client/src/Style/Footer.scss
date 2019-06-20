@@ -1,0 +1,44 @@
+// ==================
+//   footer-section
+// ==================
+.Footer_section {
+	background-color: #000000;
+	padding: 30px 0;
+	.footer {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	p {
+		font-family: "Caveat", cursive;
+		color: wheat;
+		display: inline-block;
+		padding: 10px;
+		font-size: 1rem;
+	}
+	.fab {
+		text-align: right;
+		color: #555;
+		font-size: 1.5rem;
+		&:hover {
+			cursor: pointer;
+			color: #e06c4b;
+		}
+	}
+	.right_section {
+		text-align: right;
+		margin-right: 30%;
+	}
+	.left_section {
+		text-align: left;
+		p {
+			font-family: "Caveat", cursive;
+			display: block;
+			// margin-left: 30%;
+			font-size: 1rem;
+		}
+	}
+	.copy-right {
+		text-align: center;
+		color: white;
+	}
+}
