@@ -1,5 +1,5 @@
 export default function User(
-	state = { isLogged: false, isAdmin: false, user: [] },
+	state = { isLogged: false, isAdmin: false, user: {} },
 	action
 ) {
 	switch (action.type) {
@@ -12,7 +12,8 @@ export default function User(
 			return {
 				...state,
 				isLogged: action.success,
-				isAdmin: action.isAdmin
+				isAdmin: action.isAdmin,
+				user: action.user
 			};
 
 		case "LOGOUT":

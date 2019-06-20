@@ -29,15 +29,28 @@ export function login(state, cb) {
 			},
 			body: JSON.stringify(state)
 		})
-			.then((response) => response.json())
+			.then((response) => {
+				if (response.status === 200) {
+					return response.json();
+				}
+
+				return null;
+			})
 			.then((data) => {
-				dispatch({
-					type: "LOGIN",
-					success: data.success,
-					isAdmin: data.isAdmin,
-					data: data.data
-				});
-				cb(true);
+				if (data) {
+					const { user } = data;
+
+					dispatch({
+						type: "LOGIN",
+						success: true,
+						isAdmin: user.isAdmin || false,
+						user: data.user
+					});
+					cb(true);
+				} else {
+					cb(false);
+					console.log("User details is not valid.");
+				}
 			});
 	};
 }

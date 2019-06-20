@@ -20,13 +20,16 @@ module.exports = function(passport) {
 				usernameField: "userName"
 			},
 			function(userName, password, done) {
+				console.log(userName, password);
 				User.findOne({ userName: userName }, function(err, user) {
+					console.log(user, "IN the findONe");
 					if (err) {
 						return done(err);
 					}
 					if (!user) {
 						return done(null, false);
 					}
+					console.log("Printing the user in passport", user);
 					user.verifyPassword(password, function(err, isMatched) {
 						if (!isMatched) {
 							return done(null, false);
