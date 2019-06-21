@@ -52,7 +52,6 @@ class Login extends Component {
 								type='text'
 								autoComplete='off'
 								name='userName'
-								placeholder='Enter user name'
 								onChange={this.handleChange}
 							/>
 							<label for='password'>password</label>
@@ -60,7 +59,6 @@ class Login extends Component {
 								type='password'
 								autoComplete='off'
 								name='password'
-								placeholder='password'
 								onChange={this.handleChange}
 							/>
 							<button className='login_btn'>login</button>

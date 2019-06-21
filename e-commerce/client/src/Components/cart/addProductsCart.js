@@ -7,7 +7,7 @@ import {
 	addProductToCart,
 	removeProductToCart
 } from "../../actions/cart/cart";
-import { customerDetail } from "../../actions/orders/orders";
+// import { customerDetail } from "../../actions/orders/orders";
 
 class addProductsCart extends Component {
 	constructor(props) {
@@ -124,7 +124,6 @@ export default connect(
 	{
 		fetchAllCartProducts,
 		addProductToCart,
-		removeProductToCart,
-		customerDetail
+		removeProductToCart
 	}
 )(addProductsCart);

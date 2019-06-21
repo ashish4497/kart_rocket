@@ -1,5 +1,5 @@
 var User = require("../models/userSchema");
-
+console.log(User, "show the user in admin component");
 adminCreator = () => {
 	var adminDetails = {
 		username: "admin",
@@ -8,7 +8,7 @@ adminCreator = () => {
 		password: "12345"
 	};
 
-	User.findOne({ email: "admin@shopping.com" }, (err, user) => {
+	User.findOne({ username: "admin" }, (err, user) => {
 		if (!user) {
 			User.create(adminDetails, function() {
 				console.log("Admin user created!");

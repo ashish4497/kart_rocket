@@ -6,7 +6,6 @@ import Shop from "./Components/user/Shop";
 import Learn from "./Components/user/Learn";
 import Register from "./Components/userAuth/Register";
 import Login from "./Components/userAuth/Login";
-import UserProfile from "./Components/user/UserProfile";
 import AddProduct from "./Components/admin/AddProduct";
 import FrontLook from "./Components/user/FontLook";
 import ProductDescription from "./Components/user/ProductDescription";

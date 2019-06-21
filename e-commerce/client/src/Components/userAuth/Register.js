@@ -49,7 +49,6 @@ class Register extends Component {
 								type='text'
 								autoComplete='off'
 								name='userName'
-								placeholder='Enter user name'
 								onChange={this.handleChange}
 							/>
 							<label for='email'>email</label>
@@ -57,15 +56,13 @@ class Register extends Component {
 								type='text'
 								autoComplete='off'
 								name='userEmail'
-								placeholder='Enter Email'
 								onChange={this.handleChange}
 							/>
-							<label for='contractNo'>contactInfo</label>
+							<label for='contractNo'>contractNo</label>
 							<input
 								type='tel'
 								autoComplete='off'
 								name='userContactNo'
-								placeholder=' Contact No'
 								onChange={this.handleChange}
 							/>
 							<label for='password'>password</label>
@@ -73,7 +70,6 @@ class Register extends Component {
 								autoComplete='off'
 								type='password'
 								name='password'
-								placeholder='password'
 								onChange={this.handleChange}
 							/>
 							<button className='signUp_btn'>signUp</button>

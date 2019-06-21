@@ -81,7 +81,6 @@ class AddProduct extends Component {
 								type='text'
 								autocomplete='off'
 								name='name'
-								placeholder='product name'
 								onChange={this.handleChange}
 							/>
 							<label for='description'>product description</label>
@@ -89,7 +88,6 @@ class AddProduct extends Component {
 								type='text'
 								autocomplete='off'
 								name='description'
-								placeholder='product description'
 								onChange={this.handleChange}
 							/>
 							<label for='size'>product size</label>
@@ -97,7 +95,6 @@ class AddProduct extends Component {
 								type='text'
 								autocomplete='off'
 								name='size'
-								placeholder='product size'
 								onChange={this.handleChange}
 							/>
 							<label for='category'>product category</label>
@@ -106,7 +103,6 @@ class AddProduct extends Component {
 								type='text'
 								autocomplete='off'
 								name='category'
-								placeholder='product category'
 								onChange={this.handleChange}
 							/>
 							<label for='color'>product color</label>
@@ -114,7 +110,6 @@ class AddProduct extends Component {
 								type='text'
 								autocomplete='off'
 								name='color'
-								placeholder='product color'
 								onChange={this.handleChange}
 							/>
 							<label for='price'>product price</label>
@@ -122,7 +117,6 @@ class AddProduct extends Component {
 								type='text'
 								autocomplete='off'
 								name='price'
-								placeholder='product price'
 								onChange={this.handleChange}
 							/>
 							<input type='submit' value='Submit' />
