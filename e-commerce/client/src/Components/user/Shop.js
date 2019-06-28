@@ -23,14 +23,15 @@ class Shop extends Component {
 				<div className='shop_component'>
 					<Top color='#1a8084' />
 					<div className='shop_section'>
-						<section className='col1_filter'>
+						<section />
+						{/* <section className='col1_filter'>
 							<input
 								className='search_product'
 								type='text'
 								placeholder='search product'
 								onKeyUp={this.handleSearch}
 							/>
-						</section>
+						</section> */}
 						<section className='col2_items_list'>
 							<div className='display_products'>
 								{products &&

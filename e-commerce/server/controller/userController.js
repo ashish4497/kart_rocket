@@ -112,7 +112,8 @@ module.exports = {
 	registerUser: (req, res) => {
 		const username = req.body.userName;
 		User.find({ username: username }, (err, user) => {
-			console.log(user);
+			// console.log(user);
+
 			if (err) throw err;
 			else {
 				if (user.length) {
@@ -128,37 +129,5 @@ module.exports = {
 				}
 			}
 		});
-	},
-	getUser: (req, res) => {
-		const user = req.user;
-		User.findOne({ _id: user })
-			.select("-password -email")
-			.populate({
-				path: "predictions",
-				populate: [
-					{ path: "eventid" },
-					{
-						path: "fightid",
-						select: "title player1 player2 result",
-						populate: [
-							{ path: "player1  player2", select: "name" },
-							{ path: "result", populate: { path: "winner" } }
-						]
-					},
-					{ path: "winner" }
-				]
-			})
-			.exec((err, user) => {
-				if (err || !user) {
-					return res.status(404).json({
-						success: false,
-						message: err || "User not present"
-					});
-				}
-				return res.status(200).json({
-					success: true,
-					user: user
-				});
-			});
 	}
 };

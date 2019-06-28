@@ -6,7 +6,6 @@ export default function User(
 		case "REGISTER":
 			return {
 				...state
-				// user: action.data
 			};
 		case "LOGIN":
 			return {

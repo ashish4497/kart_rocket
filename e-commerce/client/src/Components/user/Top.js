@@ -69,7 +69,6 @@ class Top extends Component {
 }
 
 const mapStateToProps = (state) => {
-	console.log(state, "check what comes in a state");
 	return {
 		cartProducts: state.cartList.cartProducts,
 		isLogged: state.User.isLogged

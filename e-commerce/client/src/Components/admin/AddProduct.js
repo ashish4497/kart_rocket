@@ -98,7 +98,6 @@ class AddProduct extends Component {
 								onChange={this.handleChange}
 							/>
 							<label for='category'>product category</label>
-
 							<input
 								type='text'
 								autocomplete='off'

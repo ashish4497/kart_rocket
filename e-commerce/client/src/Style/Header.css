@@ -7,9 +7,10 @@ ul li {
 }
 
 .first-page {
-  background-image: url("https://cdn.shopify.com/s/files/1/0070/7032/files/about_us_page_hero.jpg?v=1524143851&width=1024");
+  background-image: url("https://blog.mozilla.org/firefox/files/2018/11/Black-Friday-Headline.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .top-nav-bar {

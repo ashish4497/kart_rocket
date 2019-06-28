@@ -15,7 +15,7 @@ class Look extends Component {
 		const { products } = this.props;
 		return (
 			<Fragment>
-				<div className='look_page_component' background-color='white'>
+				<div className='look_page_component' background-color='#e9efed'>
 					<div className='product_list'>
 						{products &&
 							products.map((value, index) => {

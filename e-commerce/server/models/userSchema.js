@@ -8,7 +8,8 @@ const userSchema = new Schema({
 	userEmail: { type: String, required: true, unique: true },
 	userContactNo: { type: Number, unique: true, require: true },
 	password: { type: String },
-	isAdmin: false
+	isAdmin: false,
+	cart: [{ type: mongoose.Schema.Types.ObjectId, ref: "Cart" }]
 });
 
 userSchema.methods.verifyPassword = function(userPassword, cb) {
