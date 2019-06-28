@@ -27,14 +27,16 @@ class Top extends Component {
 							<Link to='/look'>
 								<li>look</li>
 							</Link>
-							<Link to='/learn'>
+							{/* <Link to='/learn'>
 								<li>learn</li>
-							</Link>
+							</Link> */}
 						</ul>
 					</div>
 					<div className='col1-row2-center'>
 						<Link to='/'>
-							<div className='logo'>logo</div>
+							<div className='logo'>
+								<p>shop good</p>
+							</div>
 						</Link>
 					</div>
 					{isLogged ? (

@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { addProduct } from "../../actions/admin/product";
 import Top from "../user/Top";
+import swal from "sweetalert";
 
 class AddProduct extends Component {
 	constructor(props) {
@@ -51,7 +52,7 @@ class AddProduct extends Component {
 			!this.state.productDetails.size ||
 			!this.state.productDetails.price
 		) {
-			alert("Please enter the Product details");
+			swal("Please enter the Product details");
 		}
 		e.preventDefault();
 		this.props.dispatch(addProduct(this.state.productDetails), (success) => {

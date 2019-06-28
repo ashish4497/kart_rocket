@@ -16,20 +16,20 @@ router.get(
 );
 router.get(
 	"/api/product/:id",
-	// userController.isLoggedIn,
-	// userController.isAdmin,
+	userController.isLoggedIn,
+	userController.isAdmin,
 	productController.singleProduct
 );
 router.delete(
 	"/api/admin/products/remove/:id",
-	// userController.isLoggedIn,
-	// userController.isAdmin,
+	userController.isLoggedIn,
+	userController.isAdmin,
 	productController.removeProduct
 );
 router.put(
 	"/api/admin/product/edit/:id",
-	// userController.isLoggedIn,
-	// userController.isAdmin,
+	userController.isLoggedIn,
+	userController.isAdmin,
 	productController.editProduct
 );
 router.get("*", (err, res) => {

@@ -42,7 +42,7 @@ class App extends Component {
 							exact
 							path='/admin/productdetail'
 							component={ProductDetail}
-							// auth={isAdmin}
+							auth={isAdmin}
 						/>
 
 						<PrivateRoutes

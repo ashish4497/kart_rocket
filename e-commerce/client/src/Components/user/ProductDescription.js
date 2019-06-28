@@ -6,6 +6,7 @@ import {
 	addProductToCart
 } from "../../actions/cart/cart";
 import Top from "./Top";
+import swal from "sweetalert";
 
 class ProductDescription extends Component {
 	constructor(props) {
@@ -35,11 +36,15 @@ class ProductDescription extends Component {
 			...this.state,
 			[e.target.name]: e.target.value
 		});
-		this.props.addProductToCart(this.state, (cb) => {
-			if (cb) {
-				this.props.history.push("/product/cart");
-			}
-		});
+		if (!this.state.size || !this.state.color) {
+			swal("Please select the size and color");
+		} else {
+			this.props.addProductToCart(this.state, (cb) => {
+				if (cb) {
+					this.props.history.push("/product/cart");
+				}
+			});
+		}
 	};
 
 	render() {

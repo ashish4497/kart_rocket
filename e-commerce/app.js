@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
 const passport = require("passport");
@@ -9,6 +10,7 @@ const cors = require("cors");
 const path = require("path");
 const port = 8000;
 
+console.log(process.env.admin, "app.............................");
 mongoose.connect(
 	"mongodb://localhost/shoppingSite",
 	{ useNewUrlParser: true },

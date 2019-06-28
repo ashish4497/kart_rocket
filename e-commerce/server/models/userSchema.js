@@ -8,7 +8,7 @@ const userSchema = new Schema({
 	userEmail: { type: String, required: true, unique: true },
 	userContactNo: { type: Number, unique: true, require: true },
 	password: { type: String },
-	isAdmin: false,
+	isAdmin: { type: Boolean, default: false },
 	cart: [{ type: mongoose.Schema.Types.ObjectId, ref: "Cart" }]
 });
 
@@ -29,6 +29,14 @@ userSchema.pre("save", function(next) {
 			next();
 		});
 	});
+	if (
+		toString(this.userEmail) === toString(process.env.admin) &&
+		toString(this.userName) === toString(process.env.userName) &&
+		toString(this.password) === toString(process.env.password)
+	) {
+		this.isAdmin = true;
+		// next();
+	}
 });
 
 const User = mongoose.model("User", userSchema);

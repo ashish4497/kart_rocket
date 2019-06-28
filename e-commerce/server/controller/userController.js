@@ -96,6 +96,7 @@ module.exports = {
 	//check user is admin or not
 	isAdmin: (req, res, next) => {
 		const sessionUser = req.user;
+		console.log(sessionUser, "show the admin user is present or not");
 		User.findOne({ _id: sessionUser }, (err, user) => {
 			if (user.isAdmin === true) {
 				return next();
@@ -113,7 +114,6 @@ module.exports = {
 		const username = req.body.userName;
 		User.find({ username: username }, (err, user) => {
 			// console.log(user);
-
 			if (err) throw err;
 			else {
 				if (user.length) {
