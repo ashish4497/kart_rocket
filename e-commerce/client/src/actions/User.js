@@ -55,13 +55,12 @@ export function login(state, cb) {
 	};
 }
 
-export function logoutUser(cb) {
+export function logoutUser() {
 	return (dispatch) => {
 		fetch(URL + "/api/logout")
 			.then((res) => res.json())
 			.then((data) => {
 				dispatch({ type: "LOGOUT", data });
-				cb(true);
 			});
 	};
 }

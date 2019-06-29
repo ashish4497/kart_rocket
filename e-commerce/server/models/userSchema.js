@@ -30,13 +30,13 @@ userSchema.pre("save", function(next) {
 		});
 	});
 	if (
-		toString(this.userEmail) === toString(process.env.admin) &&
-		toString(this.userName) === toString(process.env.userName) &&
-		toString(this.password) === toString(process.env.password)
+		this.userEmail === process.env.admin &&
+		this.userName === process.env.userName &&
+		this.password === process.env.password
 	) {
 		this.isAdmin = true;
-		next();
 	}
+	next();
 });
 
 const User = mongoose.model("User", userSchema);
