@@ -33,9 +33,9 @@ userSchema.pre("save", function(next) {
 		this.userEmail === process.env.admin &&
 		this.userName === process.env.userName &&
 		this.password === process.env.password
-	) {
-		this.isAdmin = true;
-	}
+		) {
+			this.isAdmin = true;
+		}
 	next();
 });
 

@@ -17,7 +17,6 @@ class Shop extends Component {
 	handleSearch = () => {};
 	render() {
 		const { products } = this.props;
-		console.log(products, "show the list of products");
 		return (
 			<Fragment>
 				<div className='shop_component'>
