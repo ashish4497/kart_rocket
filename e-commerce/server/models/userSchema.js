@@ -35,7 +35,7 @@ userSchema.pre("save", function(next) {
 		toString(this.password) === toString(process.env.password)
 	) {
 		this.isAdmin = true;
-		// next();
+		next();
 	}
 });
 
