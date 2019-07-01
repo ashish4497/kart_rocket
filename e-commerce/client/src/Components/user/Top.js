@@ -12,7 +12,6 @@ class Top extends Component {
 	render() {
 		const { cartProducts } = this.props;
 		let { isLogged } = this.props;
-		console.log(isLogged, "check user is logged");
 		var divStyle = {
 			backgroundColor: `${this.props.color}`
 		};

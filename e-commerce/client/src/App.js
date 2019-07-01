@@ -12,7 +12,6 @@ import FrontLook from "./Components/user/FontLook";
 import ProductDescription from "./Components/user/ProductDescription";
 import ProductDetail from "./Components/admin/ProductDetail";
 import addProductsCart from "./Components/cart/addProductsCart";
-import ordergetInfo from "./Components/orders/ordergetInfo";
 import PrivateRoutes from "./Components/privateRoutes";
 
 class App extends Component {
@@ -49,12 +48,6 @@ class App extends Component {
 							exact
 							path='/productdescription/:id'
 							component={ProductDescription}
-							auth={isLogged}
-						/>
-						<PrivateRoutes
-							exact
-							path='/product/buy'
-							component={ordergetInfo}
 							auth={isLogged}
 						/>
 						<PrivateRoutes

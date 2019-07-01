@@ -48,7 +48,6 @@ module.exports = {
 
 	editProduct: (req, res) => {
 		const id = req.params.id;
-		console.log(id, "show the id of edit Product ");
 		Product.findByIdAndUpdate(id, (err, Product) => {
 			if (err) {
 				res.json({ message: err, success: false });

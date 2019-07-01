@@ -33,8 +33,6 @@ class Login extends Component {
 			login(this.state.userDetail, (success) => {
 				if (success) {
 					this.props.history.push("/shop");
-				} else {
-					console.log("Error with user credentials");
 				}
 			})
 		);

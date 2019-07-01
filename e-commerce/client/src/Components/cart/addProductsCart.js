@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
+import swal from "sweetalert";
+import Top from "./../user/Top";
 import { Link } from "react-router-dom";
-import Top from "../user/Top";
 import {
 	fetchAllCartProducts,
 	addProductToCart,
@@ -28,12 +29,19 @@ class addProductsCart extends Component {
 		this.setState({ quantity: e.target.value });
 	};
 
-	//function to place the order
-	// placeOrder = (e) => {
-	// 	console.log(e, "show button");
-	// 	console.log(this.state, "check the state data");
-	// 	this.props.customerDetail(this.state);
-	// };
+	// function to place the order
+	placeOrder = (e) => {
+		swal("Enter address:", {
+			content: "input"
+		}).then((value) => {
+			swal({
+				title: "Placed!",
+				text: "Clicked the button to Conform!",
+				icon: "success",
+				button: "Conform!"
+			});
+		});
+	};
 
 	//delete item from cart
 	handleDelete = (id) => {
@@ -87,7 +95,7 @@ class addProductsCart extends Component {
 													<p>{val.price * this.state.quantity}</p>
 												</div>
 												<div className='button'>
-													<Link to='/product/buy'>
+													<Link to='/product/cart'>
 														<button
 															className='placeOrder_btn detail-btn'
 															onClick={this.placeOrder}>
