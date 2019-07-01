@@ -29,13 +29,16 @@ userSchema.pre("save", function(next) {
 			next();
 		});
 	});
+	console.log(process.env.admin, "check admin email");
+	console.log(process.env.userName, "check admin name");
+	console.log(process.env.password, "check admin password");
 	if (
-		this.userEmail === process.env.admin &&
-		this.userName === process.env.userName &&
-		this.password === process.env.password
-		) {
-			this.isAdmin = true;
-		}
+		this.userEmail == process.env.admin &&
+		this.userName == process.env.userName &&
+		this.password == process.env.password
+	) {
+		this.isAdmin = true;
+	}
 	next();
 });
 
