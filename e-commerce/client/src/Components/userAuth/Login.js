@@ -12,6 +12,7 @@ class Login extends Component {
 				userName: "",
 				password: ""
 			}
+			// token: localStorage.getItem("userToken") || ""
 		};
 	}
 
@@ -30,8 +31,10 @@ class Login extends Component {
 		}
 		e.preventDefault();
 		this.props.dispatch(
-			login(this.state.userDetail, (success) => {
-				if (success) {
+			login(this.state.userDetail, (response) => {
+				if (response) {
+					// this.setState({ token: response.user._id });
+					localStorage.setItem("userToken", response.user._id);
 					this.props.history.push("/shop");
 				}
 			})
