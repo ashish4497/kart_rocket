@@ -46,7 +46,7 @@ export function login(state, cb) {
 						isAdmin: user.isAdmin || false,
 						user: data.user
 					});
-					cb(user.data);
+					cb(user);
 				} else {
 					cb(false);
 					console.log("User details is not valid.");

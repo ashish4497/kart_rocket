@@ -3,7 +3,7 @@ const Order = require("../models/ordersSchema");
 module.exports = {
 	customerDetail: (req, res) => {
 		const orders = new Order(req.body);
-		console.log(req.body, "show the data in order schema");
+		// console.log(req.body, "show the data in order schema");
 		orders.save((err, orders) => {
 			if (err) {
 				return res.json({ message: err, success: true });

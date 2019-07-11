@@ -33,8 +33,9 @@ class Login extends Component {
 		this.props.dispatch(
 			login(this.state.userDetail, (response) => {
 				if (response) {
+					// console.log(response, "asdfghjkl");
 					// this.setState({ token: response.user._id });
-					localStorage.setItem("userToken", response.user._id);
+					localStorage.setItem("userToken", response._id);
 					this.props.history.push("/shop");
 				}
 			})
@@ -48,14 +49,14 @@ class Login extends Component {
 					<div className='login_form'>
 						<form onSubmit={this.handleSubmit}>
 							<h1>Login</h1>
-							<label for='userName'>userName</label>
+							<label className='userName'>userName</label>
 							<input
 								type='text'
 								autoComplete='off'
 								name='userName'
 								onChange={this.handleChange}
 							/>
-							<label for='password'>password</label>
+							<label className='password'>password</label>
 							<input
 								type='password'
 								autoComplete='off'

@@ -4,7 +4,7 @@ import Header from "./Components/user/Header";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import Shop from "./Components/user/Shop";
-import Learn from "./Components/user/Learn";
+// import Learn from "./Components/user/Learn";
 import Register from "./Components/userAuth/Register";
 import Login from "./Components/userAuth/Login";
 import AddProduct from "./Components/admin/AddProduct";
@@ -25,7 +25,7 @@ class App extends Component {
 						<Route exact path='/shop' component={Shop} />
 						<Route exact path='/look' component={FrontLook} />
 						<Route exact path='/login' component={Login} />
-						<Route exact path='/learn' component={Learn} />
+						{/* <Route exact path='/learn' component={Learn} /> */}
 						<Route
 							exact
 							path='/register'

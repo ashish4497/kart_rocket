@@ -26,9 +26,6 @@ class Top extends Component {
 							<Link to='/look'>
 								<li>look</li>
 							</Link>
-							{/* <Link to='/learn'>
-								<li>learn</li>
-							</Link> */}
 						</ul>
 					</div>
 					<div className='col1-row2-center'>

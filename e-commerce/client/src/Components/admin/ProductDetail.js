@@ -24,7 +24,7 @@ class ProductDetail extends Component {
 
 	//Edit the product
 	handleEdit = (id) => {
-		console.log(id, "edit function fired");
+		// console.log(id, "edit function fired");
 		this.Props.editProduct(id);
 	};
 	render() {

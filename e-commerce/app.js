@@ -10,7 +10,6 @@ const cors = require("cors");
 const path = require("path");
 const port = 8000;
 
-console.log(process.env.admin, "app.............................");
 mongoose.connect(
 	"mongodb://localhost/shoppingSite",
 	{ useNewUrlParser: true },
@@ -22,9 +21,7 @@ mongoose.connect(
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(express.static(path.join(__dirname, "public")));
-
 app.set("views", path.join(__dirname, "./server/views"));
 app.set("view engine", "ejs");
 

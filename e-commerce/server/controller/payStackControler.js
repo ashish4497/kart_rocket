@@ -1,10 +1,8 @@
 const Donor = require("./../models/payment_method");
 // const { initializePayment,verifyPayment } = require("../config/payStack");
-console.log(Donor, "show the payment blank array in console");
 
 module.exports = {
 	payStack: (req, res) => {
-		console.log(req.body, "show donner detail");
 		const donor = new Donor(req.body);
 		donor.save((err, data) => {
 			if (err) {

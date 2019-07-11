@@ -72,7 +72,7 @@ export function editProduct(id) {
 }
 
 export function singleProduct(id) {
-	console.log(id, "show id in action product");
+	// console.log(id, "show id in action product");
 	return (dispatch) => {
 		fetch(URL + "/product/" + id)
 			.then((res) => res.json())

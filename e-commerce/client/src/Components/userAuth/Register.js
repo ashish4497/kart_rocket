@@ -44,28 +44,28 @@ class Register extends Component {
 					<div className='signUp_form'>
 						<h1>signUp</h1>
 						<form onSubmit={this.handleSubmit}>
-							<label for='userName'>userName</label>
+							<label className='userName'>userName</label>
 							<input
 								type='text'
 								autoComplete='off'
 								name='userName'
 								onChange={this.handleChange}
 							/>
-							<label for='email'>email</label>
+							<label className='email'>email</label>
 							<input
 								type='text'
 								autoComplete='off'
 								name='userEmail'
 								onChange={this.handleChange}
 							/>
-							<label for='contractNo'>contractNo</label>
+							<label className='contractNo'>contractNo</label>
 							<input
 								type='tel'
 								autoComplete='off'
 								name='userContactNo'
 								onChange={this.handleChange}
 							/>
-							<label for='password'>password</label>
+							<label className='password'>password</label>
 							<input
 								autoComplete='off'
 								type='password'
