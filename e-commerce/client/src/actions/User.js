@@ -20,42 +20,6 @@ export function registerSubmit(state, cb) {
 	};
 }
 
-// export function login(state, cb) {
-// 	return (dispatch) =>
-// 		new Promise((resolve, reject) => {
-// 			fetch(URL + "/api/login", {
-// 				method: "POST",
-// 				headers: {
-// 					"Content-Type": "application/json"
-// 				},
-// 				body: JSON.stringify(state)
-// 			})
-// 				.then((response) => {
-// 					if (response.status === 200) {
-// 						return response.json();
-// 					}
-// 					resolve(response);
-// 					return null;
-// 				})
-// 				.then((data) => {
-// 					if (data) {
-// 						const { user } = data;
-
-// 						dispatch({
-// 							type: "LOGIN",
-// 							success: true,
-// 							isAdmin: user.isAdmin || false,
-// 							user: data.user
-// 						});
-// 						// cb(response);
-// 					} else {
-// 						cb(false);
-// 						console.log("User details is not valid.");
-// 					}
-// 				});
-// 		});
-// }
-
 export function login(state, cb) {
 	return (dispatch) => {
 		fetch(URL + "/api/login", {
@@ -82,7 +46,7 @@ export function login(state, cb) {
 						isAdmin: user.isAdmin || false,
 						user: data.user
 					});
-					cb(data.user);
+					cb(user.data);
 				} else {
 					cb(false);
 					console.log("User details is not valid.");
