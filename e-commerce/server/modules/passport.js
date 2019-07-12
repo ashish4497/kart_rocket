@@ -21,7 +21,6 @@ module.exports = function(passport) {
 			},
 			function(userName, password, done) {
 				User.findOne({ userName: userName }, function(err, user) {
-					console.log(user, "IN the findONe");
 					if (err) {
 						return done(err);
 					}

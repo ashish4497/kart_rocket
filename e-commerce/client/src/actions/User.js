@@ -38,13 +38,14 @@ export function login(state, cb) {
 			})
 			.then((data) => {
 				if (data) {
-					const { user } = data;
-
+					const { user, token } = data;
+					localStorage.setItem("token", token);
 					dispatch({
 						type: "LOGIN",
 						success: true,
 						isAdmin: user.isAdmin || false,
-						user: data.user
+						user: data.user,
+						token
 					});
 					cb(user);
 				} else {
@@ -57,11 +58,12 @@ export function login(state, cb) {
 
 export function logoutUser() {
 	return (dispatch) => {
-		fetch(URL + "/api/logout")
-			.then((res) => res.json())
-			.then((data) => {
-				dispatch({ type: "LOGOUT", data });
-			});
+		// fetch(URL + "/api/logout")
+		// 	.then((res) => res.json())
+		// 	.then((data) => {
+		// 		dispatch({ type: "LOGOUT", data });
+		// });
+		localStorage.clear();
 	};
 }
 

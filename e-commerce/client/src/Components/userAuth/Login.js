@@ -35,7 +35,7 @@ class Login extends Component {
 				if (response) {
 					// console.log(response, "asdfghjkl");
 					// this.setState({ token: response.user._id });
-					localStorage.setItem("userToken", response._id);
+					// localStorage.setItem("userToken", response._id);
 					this.props.history.push("/shop");
 				}
 			})

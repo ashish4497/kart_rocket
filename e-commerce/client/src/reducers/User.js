@@ -1,5 +1,10 @@
 export default function User(
-	state = { isLogged: false, isAdmin: false, user: {} },
+	state = {
+		isLogged: false,
+		isAdmin: false,
+		user: {},
+		token: localStorage.token || ""
+	},
 	action
 ) {
 	switch (action.type) {
@@ -12,7 +17,8 @@ export default function User(
 				...state,
 				isLogged: action.success,
 				isAdmin: action.isAdmin,
-				user: action.user
+				user: action.user,
+				token: action.token
 			};
 
 		case "LOGOUT":

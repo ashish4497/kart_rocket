@@ -8,15 +8,15 @@ import {
 	addProductToCart,
 	removeProductToCart
 } from "../../actions/cart/cart";
-// import { customerDetail } from "../../actions/orders/orders";
+import { ordersInfo } from "../../actions/orders/orders";
 
 class addProductsCart extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			totalAmount: this.props.cartItems.price,
 			quantity: ""
 		};
+		console.log(this.state, "state detail");
 	}
 	componentDidMount() {
 		this.props.fetchAllCartProducts();
@@ -30,10 +30,22 @@ class addProductsCart extends Component {
 	};
 
 	// function to place the order
-	placeOrder = (e) => {
+	placeOrder = (e, price) => {
 		swal("Enter address:", {
 			content: "input"
 		}).then((value) => {
+			//call the orderInfo function
+			const { quantity } = this.state;
+			const data = { quantity, price, value };
+			console.log(data, "check data");
+
+			this.props.ordersInfo(data, (succeed) => {
+				if (succeed) {
+					console.log("Order placed success");
+				} else {
+					console.log("Order not place Success");
+				}
+			});
 			swal({
 				title: "Placed!",
 				text: "Clicked the button to Conform!",
@@ -98,7 +110,7 @@ class addProductsCart extends Component {
 													<Link to='/product/cart'>
 														<button
 															className='placeOrder_btn detail-btn'
-															onClick={this.placeOrder}>
+															onClick={(e) => this.placeOrder(e, val.price[0])}>
 															placeOrder
 														</button>
 													</Link>
@@ -132,6 +144,7 @@ export default connect(
 	{
 		fetchAllCartProducts,
 		addProductToCart,
-		removeProductToCart
+		removeProductToCart,
+		ordersInfo
 	}
 )(addProductsCart);

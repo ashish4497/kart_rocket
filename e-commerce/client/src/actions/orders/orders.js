@@ -1,7 +1,8 @@
-const URL = "http://localhost:8000/product/api";
+const URL = "http://localhost:8000/order/api";
 
 //function to add order oroduct detail
-export function ordersInfo(state) {
+export function ordersInfo(state, cb) {
+	console.log(state, "orderinfo satta");
 	return (dispatch) => {
 		fetch(URL + "/orderplaced/buy", {
 			method: "POST",
@@ -16,6 +17,7 @@ export function ordersInfo(state) {
 					type: "ADD_ORDER",
 					order: data
 				});
+				cb(true);
 			});
 	};
 }
@@ -32,8 +34,6 @@ export function seeOrdersDetail(state, cb) {
 			.then((res) => {
 				res.json();
 			})
-			.then((data) => {
-				console.log(data);
-			});
+			.then((data) => {});
 	};
 }

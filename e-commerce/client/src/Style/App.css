@@ -137,6 +137,10 @@ table {
   text-align: center;
 }
 
+.logo p {
+  text-align: center;
+}
+
 ul li {
   display: inline;
 }

@@ -6,12 +6,14 @@ import { logoutUser } from "../../actions/User";
 class Top extends Component {
 	handleLogout = () => {
 		this.props.dispatch(logoutUser());
-		this.props.history.push("/");
+		// this.props.history.push("/");
+		window.location.href = "/";
 	};
 
 	render() {
 		const { cartProducts } = this.props;
-		let { isLogged } = this.props;
+		let { token } = this.props;
+		console.log(token, "token");
 		var divStyle = {
 			backgroundColor: `${this.props.color}`
 		};
@@ -35,7 +37,7 @@ class Top extends Component {
 							</div>
 						</Link>
 					</div>
-					{isLogged ? (
+					{token ? (
 						<div className='col1-row3-right'>
 							<ul>
 								<Link to='/product/cart'>
@@ -69,7 +71,8 @@ class Top extends Component {
 const mapStateToProps = (state) => {
 	return {
 		cartProducts: state.cartList.cartProducts,
-		isLogged: state.User.isLogged
+		isLogged: state.User.isLogged,
+		token: state.User.token
 	};
 };
 

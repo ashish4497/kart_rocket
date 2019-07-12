@@ -39,7 +39,7 @@ export function addProductToCart(state, cb) {
 	};
 }
 export function removeProductToCart(id, cb) {
-	console.log(cb, "show the callback function");
+	// console.log(cb, "show the callback function");
 	return (dispatch) => {
 		fetch(URL + "/deleteCartProduct/" + id, {
 			method: "DELETE",

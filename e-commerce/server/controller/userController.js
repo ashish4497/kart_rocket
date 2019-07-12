@@ -1,5 +1,6 @@
 const User = require("../models/userSchema");
 const passport = require("passport");
+const jwt = require("jsonwebtoken");
 
 module.exports = {
 	createUser: (req, res) => {
@@ -45,12 +46,16 @@ module.exports = {
 					msg: "invalid input"
 				});
 			}
+			const id = user._id;
+			var token = jwt.sign({ id }, "writer");
+			console.log(token);
 			req.login(user, function(err) {
 				if (err) {
 					return next(err);
 				}
 				return res.status(200).json({
-					user
+					user,
+					token
 				});
 			});
 		})(req, res, next);
