@@ -4,7 +4,6 @@ import Header from "./Components/user/Header";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import Shop from "./Components/user/Shop";
-// import Learn from "./Components/user/Learn";
 import Register from "./Components/userAuth/Register";
 import Login from "./Components/userAuth/Login";
 import AddProduct from "./Components/admin/AddProduct";
@@ -13,6 +12,7 @@ import ProductDescription from "./Components/user/ProductDescription";
 import ProductDetail from "./Components/admin/ProductDetail";
 import addProductsCart from "./Components/cart/addProductsCart";
 import PrivateRoutes from "./Components/privateRoutes";
+import orderDetail from "./Components/admin/orderDetail";
 
 class App extends Component {
 	render() {
@@ -25,7 +25,6 @@ class App extends Component {
 						<Route exact path='/shop' component={Shop} />
 						<Route exact path='/look' component={FrontLook} />
 						<Route exact path='/login' component={Login} />
-						{/* <Route exact path='/learn' component={Learn} /> */}
 						<Route
 							exact
 							path='/register'
@@ -36,6 +35,7 @@ class App extends Component {
 							exact
 							path='/admin/addproduct'
 							component={AddProduct}
+							auth={isAdmin}
 						/>
 						<PrivateRoutes
 							exact
@@ -43,7 +43,12 @@ class App extends Component {
 							component={ProductDetail}
 							auth={isAdmin}
 						/>
-
+						<PrivateRoutes
+							exact
+							path='/admin/orders'
+							component={orderDetail}
+							auth={isAdmin}
+						/>
 						<PrivateRoutes
 							exact
 							path='/productdescription/:id'

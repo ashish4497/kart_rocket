@@ -39,7 +39,11 @@ export function login(state, cb) {
 			.then((data) => {
 				if (data) {
 					const { user, token } = data;
-					localStorage.setItem("token", token);
+					const userInfo = {
+						isAdmin: user.isAdmin,
+						token
+					};
+					localStorage.setItem("userInfo", JSON.stringify(userInfo));
 					dispatch({
 						type: "LOGIN",
 						success: true,

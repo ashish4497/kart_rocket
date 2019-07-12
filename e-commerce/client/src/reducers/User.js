@@ -1,12 +1,16 @@
-export default function User(
-	state = {
-		isLogged: false,
-		isAdmin: false,
+function getInitialState() {
+	const userInfoString = localStorage.getItem("userInfo");
+	const userInfo = JSON.parse(userInfoString || "{}");
+
+	return {
+		isLogged: userInfo.token ? true : false,
+		isAdmin: userInfo.isAdmin,
 		user: {},
-		token: localStorage.token || ""
-	},
-	action
-) {
+		token: userInfo.token
+	};
+}
+
+export default function User(state = getInitialState(), action) {
 	switch (action.type) {
 		case "REGISTER":
 			return {

@@ -51,7 +51,6 @@ class ProductDetail extends Component {
 														className='fas fa-trash-alt'
 														onClick={() => this.handleDelete(value._id)}
 													/>
-
 													<p className='product-price'>{value.price} Rs</p>
 													<i
 														className='fas fa-edit'

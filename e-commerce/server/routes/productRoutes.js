@@ -4,8 +4,8 @@ const productController = require("../controller/productController");
 const userController = require("../controller/userController");
 router.post(
 	"/api/admin/addproduct",
-	// userController.isLoggedIn,
-	// userController.isAdmin,
+	userController.isLoggedIn,
+	userController.isAdmin,
 	productController.addProduct
 );
 router.get(

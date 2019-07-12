@@ -13,7 +13,6 @@ class Top extends Component {
 	render() {
 		const { cartProducts } = this.props;
 		let { token } = this.props;
-		console.log(token, "token");
 		var divStyle = {
 			backgroundColor: `${this.props.color}`
 		};

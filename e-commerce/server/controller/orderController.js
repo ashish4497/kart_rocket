@@ -3,7 +3,6 @@ const Order = require("../models/ordersSchema");
 module.exports = {
 	customerDetail: (req, res) => {
 		const orders = new Order(req.body);
-		console.log(orders, "show the data");
 		orders.save((err, order) => {
 			console.log(order, "show the data in order schema");
 			if (err) {
@@ -16,7 +15,8 @@ module.exports = {
 	showOrderList: (req, res) => {
 		Order.find(
 			({},
-			(err, order) => {
+			(err, orderInfo) => {
+				console.log(orderInfo, "find backend fun");
 				if (err) {
 					return res.json({
 						message: err,
