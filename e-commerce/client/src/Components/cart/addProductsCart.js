@@ -14,9 +14,9 @@ class addProductsCart extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			quantity: ""
+			quantity: "",
+			items: this.props.cartItems
 		};
-		console.log(this.state, "state detail");
 	}
 	componentDidMount() {
 		this.props.fetchAllCartProducts();
@@ -34,24 +34,23 @@ class addProductsCart extends Component {
 		swal("Enter address:", {
 			content: "input"
 		}).then((value) => {
-			//call the orderInfo function
-			const { quantity } = this.state;
-			const data = { quantity, price, value };
-			console.log(data, "check data");
+			if (value) {
+				//call the orderInfo function
+				const { quantity } = this.state;
+				const { items } = this.state;
+				console.log(items, "show the items");
+				const data = { quantity, items, price, value };
 
-			this.props.ordersInfo(data, (succeed) => {
-				if (succeed) {
-					console.log("Order placed success");
-				} else {
-					console.log("Order not place Success");
-				}
-			});
-			swal({
-				title: "Placed!",
-				text: "Clicked the button to Conform!",
-				icon: "success",
-				button: "Conform!"
-			});
+				this.props.ordersInfo(data, (succeed) => {
+					if (succeed) {
+						swal("Order placed success !");
+					} else {
+						swal("Please Check the Order status !");
+					}
+				});
+			} else {
+				swal("Please Enter the Address !");
+			}
 		});
 	};
 
@@ -92,6 +91,7 @@ class addProductsCart extends Component {
 														type='number'
 														name='quantity'
 														onChange={this.handleChange}
+														required
 													/>
 												</form>
 												<div className='color'>

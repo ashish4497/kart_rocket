@@ -2,7 +2,6 @@ const Local = require("passport-local").Strategy;
 var passport = require("passport");
 const User = require("../models/userSchema");
 
-// console.log(User, "show user in passport");
 module.exports = function(passport) {
 	passport.serializeUser(function(user, done) {
 		done(null, user._id);
@@ -27,7 +26,6 @@ module.exports = function(passport) {
 					if (!user) {
 						return done(null, false);
 					}
-					// console.log("Printing the user in passport", user);
 					user.verifyPassword(password, function(err, isMatched) {
 						if (!isMatched) {
 							return done(null, false);

@@ -24,7 +24,6 @@ class ProductDetail extends Component {
 
 	//Edit the product
 	handleEdit = (id) => {
-		// console.log(id, "edit function fired");
 		this.Props.editProduct(id);
 	};
 	render() {
@@ -52,10 +51,6 @@ class ProductDetail extends Component {
 														onClick={() => this.handleDelete(value._id)}
 													/>
 													<p className='product-price'>{value.price} Rs</p>
-													<i
-														className='fas fa-edit'
-														onClick={() => this.handleEdit(value._id)}
-													/>
 												</span>
 											</div>
 										</div>

@@ -307,6 +307,10 @@ a {
   text-transform: capitalize;
 }
 
+.col2_items_list .product_detail {
+  background: #f0eaea;
+}
+
 .col2_items_list .show_product {
   display: -ms-grid;
   display: grid;
@@ -316,8 +320,8 @@ a {
 }
 
 .col2_items_list .show_product:hover {
-  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 5px rgba(165, 151, 151, 0.5);
+          box-shadow: 0px 0px 5px rgba(165, 151, 151, 0.5);
   cursor: pointer;
 }
 

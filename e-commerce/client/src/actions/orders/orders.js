@@ -2,7 +2,6 @@ const URL = "http://localhost:8000/order/api";
 
 //function to add order oroduct detail
 export function ordersInfo(state, cb) {
-	console.log(state, "orderinfo satta");
 	return (dispatch) => {
 		fetch(URL + "/orderplaced/buy", {
 			method: "POST",

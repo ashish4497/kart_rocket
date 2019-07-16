@@ -4,7 +4,6 @@ module.exports = {
 	customerDetail: (req, res) => {
 		const orders = new Order(req.body);
 		orders.save((err, order) => {
-			console.log(order, "show the data in order schema");
 			if (err) {
 				return res.json({ message: err, success: true });
 			} else {
@@ -16,7 +15,6 @@ module.exports = {
 		Order.find(
 			({},
 			(err, orderInfo) => {
-				console.log(orderInfo, "find backend fun");
 				if (err) {
 					return res.json({
 						message: err,

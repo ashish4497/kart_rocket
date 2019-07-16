@@ -48,7 +48,6 @@ module.exports = {
 			}
 			const id = user._id;
 			var token = jwt.sign({ id }, "writer");
-			console.log(token);
 			req.login(user, function(err) {
 				if (err) {
 					return next(err);

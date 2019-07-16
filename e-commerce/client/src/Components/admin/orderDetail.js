@@ -8,8 +8,7 @@ class orderDetail extends Component {
 		// 	this.props.seeOrdersDetail();
 		// };
 
-		const { orders } = this.props;
-		console.log(orders, "admin able to see the order");
+		// const { orders } = this.props;
 		return (
 			<div className='order_Product_Detail'>
 				<section className='product_description'>
@@ -21,7 +20,6 @@ class orderDetail extends Component {
 }
 
 const mapStateToProps = (state) => {
-	console.log(state, "state ");
 	return {
 		orders: state.Order.order
 	};

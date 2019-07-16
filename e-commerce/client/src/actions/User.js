@@ -54,7 +54,6 @@ export function login(state, cb) {
 					cb(user);
 				} else {
 					cb(false);
-					console.log("User details is not valid.");
 				}
 			});
 	};

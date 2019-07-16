@@ -29,7 +29,6 @@ export function addProductToCart(state, cb) {
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				// console.log(data, "show the data in cart route");
 				dispatch({
 					type: "ADD_TO_CART",
 					addData: [data]
@@ -39,7 +38,6 @@ export function addProductToCart(state, cb) {
 	};
 }
 export function removeProductToCart(id, cb) {
-	// console.log(cb, "show the callback function");
 	return (dispatch) => {
 		fetch(URL + "/deleteCartProduct/" + id, {
 			method: "DELETE",
