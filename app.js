@@ -49,7 +49,10 @@ if (process.env.NODE_ENV === "development") {
 	);
 
 	app.use(require("webpack-hot-middleware")(compiler));
-}
+// } else {
+// 	var webpack = require("webpack");
+// 	var webpackPro = require("./webpackproduction");
+// }
 
 app.use(cors());
 require("./server/modules/passport")(passport);
