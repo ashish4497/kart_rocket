@@ -1,0 +1,702 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.logo {
+  text-align: center; }
+  .logo p {
+    text-align: center; }
+
+ul li {
+  display: inline; }
+
+.first-page {
+  background-image: url("https://blog.mozilla.org/firefox/files/2018/11/Black-Friday-Headline.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.top-nav-bar {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  padding: 20px 0;
+  font-size: 1.3rem;
+  text-decoration: capitalization; }
+  .top-nav-bar .col1-row1-left {
+    display: flex; }
+    .top-nav-bar .col1-row1-left ul li {
+      margin: 0 2rem;
+      color: white;
+      font-weight: 500;
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      line-height: 10%;
+      font-size: 1rem; }
+    .top-nav-bar .col1-row1-left ul {
+      align-items: flex-start; }
+  .top-nav-bar .col1-row2-center p {
+    font-family: "Rock Salt", cursive;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+    text-align: center; }
+  .top-nav-bar .col1-row3-right ul li {
+    color: white;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: none;
+    padding-bottom: 6px;
+    font-size: 1rem; }
+  .top-nav-bar .col1-row3-right ul {
+    text-align: right;
+    margin-right: 1.5rem; }
+  .top-nav-bar .top-right ul li {
+    color: white;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: none;
+    padding-bottom: 6px;
+    font-size: 1rem; }
+  .top-nav-bar .top-right ul {
+    text-align: right;
+    margin-right: 1.5rem; }
+
+.row-e-content {
+  position: relative;
+  height: 90vh; }
+  .row-e-content p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-family: "Caveat", cursive;
+    text-align: center;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.2;
+    font-weight: 300; }
+
+a {
+  text-decoration: none; }
+
+.shop_section {
+  background-color: #e9efed;
+  padding: 30px 25px;
+  display: grid;
+  grid-template-columns: 20% 80%; }
+  .shop_section .search_product {
+    padding: 3px;
+    text-align: left; }
+
+.col1_filter .search_product {
+  padding: 12px 25px;
+  outline: none;
+  text-transform: capitalize; }
+
+.col1_filter :placeholder-shown {
+  text-align: left; }
+
+.col2_items_list .display_products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px; }
+
+.col2_items_list img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; }
+
+.col2_items_list p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Caveat", cursive;
+  color: #111111;
+  margin-top: 6px; }
+
+.col2_items_list .product-name {
+  text-transform: uppercase; }
+
+.col2_items_list .product-price {
+  color: #1a8084;
+  text-transform: capitalize; }
+
+.col2_items_list .product_detail {
+  background: #fa7979; }
+
+.col2_items_list .show_product {
+  display: grid;
+  grid-template-rows: 250px 60px;
+  grid-gap: 0; }
+  .col2_items_list .show_product:hover {
+    box-shadow: 0px 0px 5px rgba(165, 151, 151, 0.5);
+    cursor: pointer; }
+  .col2_items_list .show_product:hover .product_detail {
+    background-color: #eb4800; }
+
+.main {
+  background-color: #1a8084; }
+  .main .product_details {
+    box-sizing: border-box;
+    padding: 50px 0; }
+    .main .product_details .product_form {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px 45px;
+      width: 50%;
+      margin: 0 auto; }
+    .main .product_details h1 {
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      font-size: 1.8rem;
+      text-transform: capitalize;
+      font-weight: 400;
+      margin-bottom: 25px;
+      text-decoration-line: underline;
+      color: #9eb2c9; }
+    .main .product_details input[type="text"],
+    .main .product_details input[type="file"],
+    .main .product_details select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; }
+    .main .product_details input[type="submit"] {
+      width: 100%;
+      background-color: #4caf50;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer; }
+    .main .product_details input[type="submit"]:hover {
+      background-color: #45a049; }
+    .main .product_details label {
+      text-transform: capitalize;
+      font-size: 1.1rem;
+      font-family: "Caveat", cursive;
+      color: #1a8084; }
+    .main .product_details ::-webkit-input-placeholder {
+      font-size: 14px;
+      font-family: "Caveat", cursive;
+      text-transform: capitalize; }
+
+.form_section {
+  background-color: #1a8084;
+  height: 100vh; }
+  .form_section .login_form {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px 45px;
+    width: 30%;
+    margin: 50px auto; }
+    .form_section .login_form h1 {
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      font-size: 1.8rem;
+      text-transform: capitalize;
+      font-weight: 250;
+      margin-bottom: 30px;
+      color: #1a8084; }
+    .form_section .login_form input[type="text"],
+    .form_section .login_form input[type="password"],
+    .form_section .login_form select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; }
+    .form_section .login_form .login_btn {
+      width: 100%;
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 20px;
+      margin: 8px 0;
+      border: none;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: capitalize;
+      font-family: "Roboto", sans-serif; }
+    .form_section .login_form .login_btn:hover {
+      background-color: #45a049; }
+    .form_section .login_form label {
+      text-transform: capitalize;
+      font-size: 1.1rem;
+      font-family: "Caveat", cursive;
+      color: #1a8084; }
+    .form_section .login_form ::-webkit-input-placeholder {
+      font-size: 14px;
+      font-family: "Caveat", cursive;
+      text-transform: capitalize; }
+    .form_section .login_form p {
+      text-align: right;
+      text-transform: capitalize;
+      font-size: 1.1rem;
+      font-family: "Caveat", cursive;
+      color: #1a8084; }
+    .form_section .login_form p:hover {
+      color: #65b074;
+      font-weight: 700; }
+
+.signUp_section {
+  background-color: #1a8084; }
+  .signUp_section .signUp_form {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px 45px;
+    width: 30%;
+    margin: 40px auto; }
+    .signUp_section .signUp_form h1 {
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      font-size: 1.8rem;
+      text-transform: capitalize;
+      font-weight: 250;
+      margin-bottom: 30px;
+      color: #1a8084; }
+    .signUp_section .signUp_form input[type="text"],
+    .signUp_section .signUp_form input[type="password"],
+    .signUp_section .signUp_form input[type="tel"],
+    .signUp_section .signUp_form select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; }
+    .signUp_section .signUp_form .signUp_btn {
+      width: 100%;
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 20px;
+      margin: 8px 0;
+      border: none;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: capitalize;
+      font-family: "Roboto", sans-serif; }
+    .signUp_section .signUp_form .signUp_btn:hover {
+      background-color: #45a049; }
+    .signUp_section .signUp_form label {
+      text-transform: capitalize;
+      font-size: 1.1rem;
+      font-family: "Caveat", cursive;
+      color: #1a8084; }
+    .signUp_section .signUp_form ::-webkit-input-placeholder {
+      font-size: 14px;
+      font-family: "Caveat", cursive;
+      text-transform: capitalize; }
+    .signUp_section .signUp_form p {
+      text-align: right;
+      text-transform: capitalize;
+      font-size: 1.1rem;
+      font-family: "Caveat", cursive;
+      color: #1a8084; }
+    .signUp_section .signUp_form p:hover {
+      color: #65b074;
+      font-weight: 700; }
+
+.product_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 35px 50px; }
+  .product_list p {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Caveat", cursive;
+    color: #1a8084;
+    margin-top: 18px; }
+  .product_list img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .product_list .product_images {
+    display: grid;
+    grid-template-rows: 300px 60px;
+    grid-gap: 0; }
+    .product_list .product_images:hover {
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+      cursor: pointer; }
+    .product_list .product_images:hover .product_detail {
+      background-color: #eb4800; }
+
+.Footer_section {
+  background-color: #000000;
+  padding: 30px 0; }
+  .Footer_section .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+  .Footer_section p {
+    font-family: "Caveat", cursive;
+    color: wheat;
+    display: inline-block;
+    padding: 10px;
+    font-size: 1rem; }
+  .Footer_section .fab {
+    text-align: right;
+    color: #555;
+    font-size: 1.5rem; }
+    .Footer_section .fab:hover {
+      cursor: pointer;
+      color: #e06c4b; }
+  .Footer_section .right_section {
+    text-align: right;
+    margin-right: 30%; }
+  .Footer_section .left_section {
+    text-align: left; }
+    .Footer_section .left_section p {
+      font-family: "Caveat", cursive;
+      display: block;
+      font-size: 1rem; }
+  .Footer_section .copy-right {
+    text-align: center;
+    color: white; }
+
+.product_section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  padding: 30px 25px; }
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding: 25px 0;
+  font-family: "Caveat", cursive;
+  color: #111111; }
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; }
+
+p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Caveat", cursive;
+  color: #111111;
+  margin-top: 6px; }
+
+span {
+  color: #1a8084;
+  font-size: 1.3rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 15px; }
+
+.fas:hover {
+  color: #eb4800;
+  cursor: pointer; }
+
+.product-name {
+  text-transform: uppercase; }
+
+.product-price {
+  color: #1a8084;
+  text-transform: capitalize; }
+
+.show_product {
+  display: grid;
+  grid-template-rows: 250px 70px;
+  grid-gap: 0; }
+  .show_product:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer; }
+
+.product_description .product_image {
+  padding: 30px 25px;
+  display: grid;
+  grid-template-columns: 40% 60%; }
+
+.product_description .size-btn,
+.product_description .clr-btn {
+  text-transform: uppercase;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  outline: 0;
+  border: 0;
+  border-radius: 100%;
+  background: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.4s all;
+  cursor: pointer;
+  margin: 10px; }
+  .product_description .size-btn :hover,
+  .product_description .clr-btn :hover {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2); }
+
+.product_description .selected {
+  background: #9eb2c9; }
+
+.product_description h2 {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #9eb2c9; }
+
+.product_description p {
+  padding: 10px 0;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: "Caveat", cursive;
+  color: #111111; }
+
+.product_description .left-side-image {
+  text-align: center; }
+  .product_description .left-side-image .product-image {
+    text-align: center; }
+    .product_description .left-side-image .product-image img {
+      height: 60%;
+      width: 60%;
+      object-fit: cover;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1); }
+
+.product_description .button {
+  margin-top: 20px; }
+
+.product_description .detail-btn {
+  position: relative;
+  padding: 10px 30px;
+  outline: 0;
+  border: 0;
+  font-weight: 250;
+  text-transform: capitalize;
+  font-size: 1rem;
+  background: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.4s all;
+  cursor: pointer; }
+  .product_description .detail-btn:hover {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #eb4800;
+    color: #1a8084;
+    font-weight: 350; }
+
+.product_description .buynow_btn {
+  margin-left: 15px; }
+
+.product_description .product_description .info_product {
+  padding: 35px 50px; }
+
+.cart_component .added_product .cart_card .cart-item {
+  display: block;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  padding: 30px 35px; }
+  .cart_component .added_product .cart_card .cart-item .product-description {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); }
+  .cart_component .added_product .cart_card .cart-item .cart_image {
+    height: 200px;
+    width: 200px; }
+
+.cart_component .button {
+  position: relative; }
+  .cart_component .button .placeOrder_btn {
+    position: absolute;
+    bottom: 50%; }
+
+.cart_component .detail-btn {
+  position: relative;
+  padding: 15px 35px;
+  outline: 0;
+  border: 0;
+  font-weight: 250;
+  text-transform: capitalize;
+  font-size: 1rem;
+  background: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.4s all;
+  cursor: pointer;
+  color: #9eb2c9; }
+  .cart_component .detail-btn:hover {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #eb4800;
+    color: #1a8084;
+    font-weight: 350; }
+
+.cart_component h1 {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #9eb2c9; }
+
+.cart_component p {
+  padding: 10px 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Caveat", cursive;
+  color: #111111; }
+
+.cart_component .product_quantity .quantity {
+  height: 20px;
+  width: 35px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%); }
+
+.cart_component .product-description {
+  position: relative; }
+  .cart_component .product-description .fas {
+    position: absolute;
+    top: 1%;
+    right: 1%; }
+

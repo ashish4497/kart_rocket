@@ -1,50 +1,53 @@
-const webpack = require("webpack");
-const merge = require("webpack-merge");
-const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+/* eslint-disable */
+var webpack = require("webpack");
+var path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const common = require("./webpack.common.js");
-
-module.exports = merge(common, {
+module.exports = {
 	mode: "production",
-	stats: {
-		colors: false,
-		hash: true,
-		timings: true,
-		assets: true,
-		chunks: true,
-		chunkModules: true,
-		modules: true,
-		children: true
-	},
-	optimization: {
-		minimizer: [
-			new UglifyJSPlugin({
-				sourceMap: true,
-				uglifyOptions: {
-					compress: {
-						inline: false
+	entry: ["./client/src/index.js"],
+	stats: "errors-only",
+	module: {
+		rules: [
+			{
+				test: /\.js?$/,
+				exclude: /node_modules/,
+				use: { loader: "babel-loader" }
+			},
+			{
+				test: /\.(css|scss)$/,
+				use: [
+					{ loader: MiniCssExtractPlugin.loader },
+					{
+						loader: "css-loader"
+					},
+					{ loader: "sass-loader" }
+				]
+			},
+			{
+				test: /\.(png|jpg|gif)$/,
+				use: [
+					{
+						loader: "file-loader",
+						options: {}
 					}
-				}
-			})
-		],
-		runtimeChunk: false,
-		splitChunks: {
-			cacheGroups: {
-				default: false,
-				commons: {
-					test: /[\\/]node_modules[\\/]/,
-					name: "vendor_app",
-					chunks: "all",
-					minChunks: 2
-				}
+				]
 			}
-		}
+		]
+	},
+	output: {
+		filename: "bundle.js",
+		path: __dirname + "/dist/bundle/",
+		publicPath: "/static/"
 	},
 	plugins: [
 		new webpack.DefinePlugin({
 			"process.env": {
 				NODE_ENV: JSON.stringify("production")
 			}
+		}),
+		new MiniCssExtractPlugin({
+			filename: "bundle.css"
 		})
 	]
-});
+};
