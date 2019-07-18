@@ -50,7 +50,7 @@ if (process.env.NODE_ENV === "development") {
 
 	app.use(require("webpack-hot-middleware")(compiler));
 }
-//else to production deployment
+// //else to production deployment
 else {
 	var webpackPro = require("./webpack.prod.config");
 	var compiler = webpack(webpackPro);

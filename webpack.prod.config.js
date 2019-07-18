@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
 	mode: "production",
 	entry: ["./client/src/index.js"],
-	stats: "errors-only",
 	module: {
 		rules: [
 			{
@@ -42,6 +41,8 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.DefinePlugin({
+			__DEV__: false,
+			__PROD__: true,
 			"process.env": {
 				NODE_ENV: JSON.stringify("production")
 			}
