@@ -12,7 +12,7 @@ var webpack = require("webpack");
 const port = 8000;
 
 mongoose.connect(
-	"mongodb://localhost/shoppingSite",
+	"mongodb://ashish:ashish4497@ds353007.mlab.com:53007/shopgood",
 	{ useNewUrlParser: true },
 	function(err, connection) {
 		if (err) throw err;
