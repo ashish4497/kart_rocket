@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 var webpack = require("webpack");
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 mongoose.connect(
 	"mongodb://ashish4497:Password1210@ds231501.mlab.com:31501/postblog",
