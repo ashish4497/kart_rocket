@@ -11,14 +11,16 @@ const path = require("path");
 var webpack = require("webpack");
 const port = process.env.PORT || 8000;
 
-mongoose.connect(
-	"mongodb://ashish4497:Password1210@ds351987.mlab.com:51987/shopgood",
-	{ useNewUrlParser: true },
-	function(err, connection) {
-		if (err) throw err;
-		else console.log("connected to mongodb");
-	}
-);
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
+
+// mongoose.connect(
+// 	"mongodb://ashish4497:Password1210@ds231501.mlab.com:31501/postblog",
+// 	{ useNewUrlParser: true },
+// 	function(err, connection) {
+// 		if (err) throw err;
+// 		else console.log("connected to mongodb");
+// 	}
+// );
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
