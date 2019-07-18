@@ -12,7 +12,7 @@ var webpack = require("webpack");
 const port = 8000;
 
 mongoose.connect(
-	"mongodb://ashish:ashish4497@ds353007.mlab.com:53007/shopgood",
+	"mongodb://ashish4497:Password1210@ds231501.mlab.com:31501/postblog",
 	{ useNewUrlParser: true },
 	function(err, connection) {
 		if (err) throw err;
@@ -31,7 +31,7 @@ app.use(
 		secret: "writer",
 		resave: true,
 		saveUninitialized: true,
-		store: new MongoStore({ url: "mongodb://localhost/shoppingSite" })
+		store: new MongoStore({ mongooseConnection: mongoose.connection })
 	})
 );
 app.use(passport.initialize());
