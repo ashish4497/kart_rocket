@@ -8,6 +8,7 @@ const MongoStore = require("connect-mongo")(session);
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
+var webpack = require("webpack");
 const port = 8000;
 
 mongoose.connect(
@@ -37,7 +38,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 if (process.env.NODE_ENV === "development") {
-	var webpack = require("webpack");
 	var webpackConfig = require("./webpack.config");
 	var compiler = webpack(webpackConfig);
 
