@@ -38,9 +38,7 @@
 		"redux-thunk": "^2.3.0",
 		"request": "^2.88.0",
 		"mini-css-extract-plugin": "^0.5.0",
-		"sweetalert": "^2.1.2"
-	},
-	"devDependencies": {
+		"sweetalert": "^2.1.2",
 		"cross-env": "^5.2.0",
 		"css-loader": "^2.0.0",
 		"file-loader": "^2.0.0",
