@@ -28,7 +28,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "dist")));
 app.set("views", path.join(__dirname, "./server/views"));
 app.set("view engine", "ejs");
 
@@ -55,18 +55,6 @@ if (process.env.NODE_ENV === "development") {
 	);
 
 	app.use(require("webpack-hot-middleware")(compiler));
-}
-// //else to production deployment
-else {
-	var webpackPro = require("./webpack.prod.config");
-	var compiler = webpack(webpackPro);
-
-	app.use(
-		require("webpack-hot-middleware")(compiler, {
-			noInfo: true,
-			proPath: webpackPro.output.proPath
-		})
-	);
 }
 
 app.use(cors());
