@@ -22,21 +22,18 @@ userSchema.methods.verifyPassword = function(userPassword, cb) {
 userSchema.pre("save", function(next) {
 	var password = this.password;
 	var self = this;
-	if (this.isModified(this.password)) return next();
+	if (!this.isModified("password")) return next();
+	if (this.userName == process.env.userName) {
+		this.isAdmin = true;
+	}
 	bcrypt.genSalt(SALT_FACTOR, function(err, salt) {
 		bcrypt.hash(password, salt, function(err, hash) {
 			self.password = hash;
 			next();
 		});
 	});
-	if (
-		this.userEmail == process.env.admin &&
-		this.userName == process.env.userName &&
-		this.password == process.env.password
-	) {
-		this.isAdmin = true;
-	}
-	next();
+
+	// next();
 });
 
 const User = mongoose.model("User", userSchema);

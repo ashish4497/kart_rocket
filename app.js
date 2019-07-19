@@ -7,16 +7,17 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 var webpack = require("webpack");
-const port = process.env.PORT || 8000;
-
+const port = 8000;
+// process.env.PORT ||
 require("dotenv").config();
 
-console.log(process.env.MONGO_URI, "asdfghjkASDFG");
-
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }, (err) => {
+	console.log(err);
+	console.log("connected ? ", err ? false : true);
+});
 
 // mongoose.connect(
-// 	"mongodb://ashish4497:Password1210@ds231501.mlab.com:31501/postblog",
+// 	"mongodb://localhost/shoppingSite",
 // 	{ useNewUrlParser: true },
 // 	function(err, connection) {
 // 		if (err) throw err;
