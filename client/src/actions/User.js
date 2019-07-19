@@ -1,4 +1,4 @@
-const URL = "http://localhost:8000/user";
+const URL = "/user";
 
 export function registerSubmit(state, cb) {
 	return (dispatch) => {

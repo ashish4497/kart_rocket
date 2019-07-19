@@ -1,4 +1,4 @@
-const URL = "http://localhost:8000/order/api";
+const URL = "/order/api";
 
 //function to add order oroduct detail
 export function ordersInfo(state, cb) {

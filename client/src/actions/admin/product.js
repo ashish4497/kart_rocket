@@ -1,4 +1,4 @@
-const URL = "http://localhost:8000/product/api";
+const URL = "/product/api";
 
 export function addProduct(state, cb) {
 	return (dispatch) => {

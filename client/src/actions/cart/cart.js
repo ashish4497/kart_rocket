@@ -1,4 +1,4 @@
-const URL = "http://localhost:8000/cart/api";
+const URL = "/cart/api";
 
 export function fetchAllCartProducts(state) {
 	return (dispatch) => {
