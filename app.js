@@ -1,8 +1,6 @@
-require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
 const passport = require("passport");
-const app = express();
 const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo")(session);
 const bodyParser = require("body-parser");
@@ -10,6 +8,10 @@ const cors = require("cors");
 const path = require("path");
 var webpack = require("webpack");
 const port = process.env.PORT || 8000;
+
+require("dotenv").config();
+
+console.log(process.env.MONGO_URI, "asdfghjkASDFG");
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
 
@@ -21,6 +23,8 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
 // 		else console.log("connected to mongodb");
 // 	}
 // );
+
+const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
